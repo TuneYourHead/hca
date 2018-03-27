@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home Court Advantage</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+  <section class="wrapper">
+    <header class="header"><a href="./"><img src="./img/logo.png" class="header-logo" alt="logo"></a></header>
+    <section class="hero parallax" data-parallax-bg-image="./img/hero-image.png" data-parallax-bg-position="top center" data-parallax-speed="0.3">
+      <section class="hero-text">
+        <h1 class="hero-title">turnkey indoor/outdoor courts</h1>
+        <p class="hero-subtitle">full service From modular flooring and basketball hoops and accessories, to synthetic turf... whatever you can dream up, we can help make it happen.</p>
+        <section class="hero-contact-us">
+          <a href="tel:8472748998" class="hero-phone"><span class="button">(847) 274 - 8998</span><span class="button">Contact</span></a>
+          <p class="hero-contact-info">Contact Hours: M-F 8:30AM-5PM, Sat 10:30AM-3PM, Sun Closed</p>
+          <p class="hero-contact-info">Show Room Hours: By Appointment Only</p>
+        </section>
+      </section>
+      <span class="overlay"></span>
+    </section>
+    <section class="what-we-do">
+      <section class="what-we-do-item residential parallax" data-parallax-bg-image="./img/residential.jpg" data-parallax-bg-position="top center" data-parallax-speed="0.1">
+        <h2 class="what-we-do-title">Residential</h2>
+        <p class="what-we-do-subtitle">Indoor/outdoor Courts for Year-Round Family Fun</p>
+        <p class="what-we-do-text">Cost effective modular floors, wood floors, hoops, wall padding, custom logos, nets, equipment storage, lockers, and anything else to make your indoor court the envy of the neighborhood.</p>
+        <span class="overlay"></span>
+      </section>
+      <section class="what-we-do-item commertial parallax" data-parallax-bg-image="./img/commertial.jpg" data-parallax-bg-position="top center" data-parallax-speed="0.1">
+        <h2 class="what-we-do-title">commercial</h2>
+        <p class="what-we-do-subtitle">for your high usage needs</p>
+        <p class="what-we-do-text">We specialize in heavy duty flooring and accessories to handle your high traffic commercial needs.  No project is too large.</p>
+        <span class="overlay"></span>
+      </section>
+    </section>
+    <section class="slider">
+      <img src="./img/userpics/slider/slider1.jpg" alt="slider-image">
+      <img src="./img/userpics/slider/slider2.jpg" alt="slider-image">
+      <img src="./img/userpics/slider/slider3.jpg" alt="slider-image">
+      <img src="./img/userpics/slider/slider1.jpg" alt="slider-image">
+      <img src="./img/userpics/slider/slider2.jpg" alt="slider-image">
+      <img src="./img/userpics/slider/slider3.jpg" alt="slider-image">
+    </section>
+    <section class="contact-us">
+      <h2 class="contact-us-title">contact us</h2>
+      <p class="contact-us-subtitle">For estimates, please contact us at your convenience.  It's an honor to help you make your sports dream a reality.</p>
+      <form action="" class="contact-us-form">
+        <input type="text" name="name" placeholder="name" required>
+        <input type="email" name="email" placeholder="email" required>
+        <input type="phone" name="phone" placeholder="phone" required>
+        <input type="text" name="address" placeholder="address" required>
+        <textarea name="message" cols="30" rows="10" placeholder="message" required>
+        </textarea>
+        <input class="contact-us-submit button" type="submit" placeholder="submit">
+      </form>
+    </section>
+    <section class="our-partners">
+      <ul class="our-partners-list">
+      </ul>
+    </section>
+    <footer class="footer">
+      <p class="footer-text">Location: <a href="https://www.google.com.ua/maps/place/724+Anthony+Trail,+Northbrook,+IL+60062,+%D0%A1%D0%A8%D0%90/data=!4m2!3m1!1s0x880fc0aa3ecaa03b:0x9d18b31be310988a?sa=X&ved=0ahUKEwiC1K_8io3aAhWNKiwKHcEtA84Q8gEIJjAA" target="_blank">724 Anthony Trail, Northbrook, Illinois 60062, United States</a></p>
+      <p class="footer-copyright">Copyright © 2018 Homecourtadvantage.net - All Rights Reserved.</p>
+    </footer>
+  </section>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="./js/parallax-background.min.js"></script>
+  <script>
+    (function ($) {
+        $('.parallax').parallaxBackground();
+    })(jQuery);
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: true
+    });
+  </script>
+</body>
+</html>
