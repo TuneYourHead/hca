@@ -19,7 +19,7 @@
         <h1 class="hero-title">turnkey indoor/outdoor courts</h1>
         <p class="hero-subtitle">full service From modular flooring and basketball hoops and accessories, to synthetic turf... whatever you can dream up, we can help make it happen.</p>
         <section class="hero-contact-us">
-          <div class="hero-phone"><a href="tel:8472748998" class="button">(847) 274 - 8998</a><span class="button">Contact</span></div>
+          <div class="hero-phone"><a href="tel:8472748998" class="button">(847) 274 - 8998</a><span class="button scroll-to-contact">Contact</span></div>
           <p class="hero-contact-info">Contact Hours: M-F 8:30AM-5PM, Sat 10:30AM-3PM, Sun Closed</p>
           <p class="hero-contact-info">Show Room Hours: By Appointment Only</p>
         </section>
@@ -69,7 +69,7 @@
       <form action="" class="contact-us-form">
         <input type="text" name="name" placeholder="name" required>
         <input type="email" name="email" placeholder="email" required>
-        <input type="phone" name="phone" placeholder="phone" required>
+        <input type="phone" name="phone" placeholder="phone" class="phone_us" required>
         <input type="text" name="address" placeholder="address" required>
         <textarea name="message" cols="10" rows="5" placeholder="message" required></textarea>
         <input class="contact-us-submit button" type="submit" placeholder="submit">
@@ -87,7 +87,14 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="./js/parallax-background.min.js"></script>
+  <script src="./js/jquery.mask.min.js"></script>
   <script>
+  $(".scroll-to-contact").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".contact-us").offset().top
+    }, 1000);
+  });
+    $('.phone_us').mask('(000) 000-0000');
     (function ($) {
       $('.parallax').parallaxBackground();
     })(jQuery);
