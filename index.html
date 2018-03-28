@@ -159,7 +159,16 @@
       appendArrows: ".slider-nav",
       appendDots: ".slider-nav",
       nextArrow: '<span class="slider-arrows slider-arrows_right">&gt;</span>',
-      prevArrow: '<span class="slider-arrows">&lt;</span>'
+      prevArrow: '<span class="slider-arrows">&lt;</span>',
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+      ],
     });
     $('.phone_us').mask('(000) 000-0000');
   </script>

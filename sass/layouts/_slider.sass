@@ -1,5 +1,7 @@
 .slider
   position: relative
+  @media(max-width: $sm-max-width)
+    margin-bottom: 10px
 
 .slick-dots li
   list-style: none
@@ -20,6 +22,10 @@
     border-radius: 50%
     transition: background-color 0.3 ease-in-out
     cursor: pointer
+    @media(max-width: $md-max-width)
+      margin-right: $global-margin*2
+      height: 10px
+      width: 10px
   &:last-of-type
     &:before
       margin-right: 0
@@ -28,6 +34,8 @@
   position: relative
   width: fit-content
   margin: $global-margin*2 auto
+  @media(max-width: $sm-max-width)
+    display: none
 
 .slick-dots li.slick-active
   &:before
@@ -40,10 +48,16 @@
   color: $accent
   cursor: pointer
   text-align: center
+  @media(max-width: $md-max-width)
+    font-size: 4em
+    left: -60px
+    top: -28px
 
 .slider-arrows_right
   left: auto
   right: -15px
+  @media(max-width: $md-max-width)
+    right: -60px
 
 .slider-image-wrapper
   height: 250px!important
@@ -53,6 +67,9 @@
   transition: transform 0.5s linear
   transform-origin: center
   position: relative
+  @media(max-width: $md-max-width)
+    height: 350px!important
+    margin-top: 0
   &:after
     position: absolute
     top: 0
@@ -73,6 +90,9 @@
   margin-top: 125px
   z-index: 10000
   box-shadow: 0 0 10px rgba(0,0,0,.5)
+  @media(max-width: $md-max-width)
+    transform: none
+    margin-top: 0
   &:after
     opacity: 0
   img

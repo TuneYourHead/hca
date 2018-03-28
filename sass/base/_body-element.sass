@@ -1,9 +1,13 @@
-body
+body, html
   font-family: $global-font
   font-size: 14px
   overflow-x: hidden
   background-color: $black
   color: $white
+  @media(max-width: $sm-max-width)
+    font-size: 12px
+  @media(max-width: 370px)
+    font-size: 10px
 
 *
   box-sizing: border-box
@@ -24,6 +28,8 @@ body
   padding: 0 $global-padding*1.5
   box-sizing: initial
   text-align: center
+  @media(max-width: $sm-max-width)
+    padding: 0
 
 #pop
   display: none

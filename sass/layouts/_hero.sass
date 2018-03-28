@@ -3,13 +3,19 @@
   margin-bottom: $global-margin*2
   position: relative
   animation: fadein 2s
-
+  @media(max-width: $md-max-width)
+    padding: $global-padding
+  @media(max-width: $sm-max-width)
+    padding: 40px 10px 20px
+    margin-bottom: 10px
 .hero-title
   font-size: 2.5em
   text-transform: uppercase
   line-height: 1em
   letter-spacing: 1px
   margin-bottom: $global-margin*2
+  @media(max-width: $md-max-width)
+    margin-bottom: $global-margin
 
 .hero-subtitle
   font-size: 1.5em
@@ -17,6 +23,8 @@
   line-height: 1.2em
   max-width: 600px
   margin: 0 auto
+  @media(max-width: $md-max-width)
+    margin-bottom: $global-margin*2
 
 .hero-phone
   display: flex
@@ -25,11 +33,18 @@
   align-items: center
   flex-wrap: wrap
   margin: $global-margin*2 auto
+  @media(max-width: $md-max-width)
+    margin: $global-margin auto
+    max-width: 80%
   a, span
     display: inline-block
     color: $white
     flex-basis: 150px
     cursor: pointer
+    @media(max-width: $md-max-width)
+      flex-basis: 100%
+      margin-bottom: $global-margin
+
 
 @keyframes fadein
   from

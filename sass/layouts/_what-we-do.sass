@@ -2,17 +2,60 @@
   display: flex
   justify-content: space-between
   margin-bottom: $global-margin*2
+  position: relative
+  &:before
+    position: absolute
+    height: 120px
+    width: 120px
+    border-radius: 50%
+    box-sizing: border-box
+    background-color: $accent
+    color: $white
+    font-family: $title-font
+    content: "and"
+    display: block
+    text-transform: uppercase
+    font-size: 2.5em
+    padding-top: 40px
+    text-align: center
+    top: calc(50% - 60px)
+    left: calc(50% - 60px)
+    z-index: 1000
+    @media(max-width: $sm-max-width)
+      height: 100px
+      width: 100px
+      top: calc(50% - 50px)
+      left: calc(50% - 50px)
+      padding-top: 35px
+  @media(max-width: $md-max-width)
+    margin-bottom: $global-margin*2
+    display: block
+  @media(max-width: $md-max-width)
+    margin-bottom: 10px
 
 .what-we-do-item
   flex-basis: 50%
+  width: 100%
   text-align: left
   padding: $global-padding
   min-height: 480px
   display: flex
   flex-direction: column
+  @media(max-width: $md-max-width)
+    padding: $global-padding/2
+    margin-bottom: $global-margin*2
+    min-height: 300px
+    padding-top: $global-padding*2
+  @media(max-width: $md-max-width)
+    margin-bottom: 10px
 
 .residential
   margin-right: $global-margin*2
+  @media(max-width: $md-max-width)
+    margin-right: 0
+    text-align: right
+    padding-bottom: $global-padding*2
+    padding-top: $global-padding/2
 
 .what-we-do-title
   text-transform: uppercase
@@ -30,3 +73,7 @@
   margin-top: $global-margin*9
   font-size: 1.5em
   line-height: 1.2em
+  @media(max-width: $lg-max-width)
+    margin-top: $global-margin*6
+  @media(max-width: $md-max-width)
+    margin-top: $global-margin

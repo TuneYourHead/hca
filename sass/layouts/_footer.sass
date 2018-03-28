@@ -1,8 +1,14 @@
 .footer
   padding: $global-padding*2 $global-padding $global-padding/2
+  @media(max-width: $md-max-width)
+    padding: $global-padding $global-padding/2 $global-padding/4
+  @media(max-width: $sm-max-width)
+    padding: 10px
 
 .footer-text, .footer-copyright
   font-size: 1.2em
+  @media(max-width: $sm-max-width)
+    margin-top: 10px
   a
     font-size: 1em
 

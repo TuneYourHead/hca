@@ -4,6 +4,14 @@
   background-repeat: no-repeat
   background-position: top
   padding: $global-padding $global-padding*2
+  @media(max-width: $md-max-width)
+    padding: $global-padding $global-padding*1.5
+    margin-left: calc(-50vw + 50%)
+    margin-right: calc(-50vw + 50%)
+  @media(max-width: $sm-max-width)
+    padding: 20px 10px 60px
+    margin-left: 0
+    margin-right: 0
 
 
 .contact-us-title
@@ -16,15 +24,27 @@
   line-height: 1.3em
   max-width: 640px
   margin: $global-padding/2 auto $global-padding
+  @media(max-width: $md-max-width)
+    margin: $global-padding/4 auto $global-padding/2
+  @media(max-width: $sm-max-width)
+    margin: $global-padding/8 auto $global-padding/2
+    max-width: 100%
 
 .contact-us-form
   background-color: $white
   padding: $global-padding*1.5 $global-padding
   box-shadow: 0 0 1px rgba(0,0,0,.1)
   position: relative
+  @media(max-width: $md-max-width)
+    padding: $global-padding*2 0
+  @media(max-width: $sm-max-width)
+    padding: 40px 0
 
 .contact-us-submit
   display: block
   position: absolute
   bottom: -63px
   left: calc(50% - 75px)
+  @media(max-width: $md-max-width)
+    left: calc(50% - 115px)
+    bottom: -60px
