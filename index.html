@@ -30,7 +30,7 @@
       <section class="what-we-do-item residential parallax" data-parallax-bg-image="./img/residential.jpg" data-parallax-bg-position="top center" data-parallax-speed="0.1">
         <h2 class="what-we-do-title">Residential</h2>
         <p class="what-we-do-subtitle">Indoor/outdoor Courts for Year-Round Family Fun</p>
-        <p class="what-we-do-text">Cost effective modular floors, wood floors, hoops, wall padding, custom logos, nets, equipment storage, lockers, and anything else to make your indoor court the envy of the neighborhood.</p>
+        <p class="what-we-do-text">Cost effective modular floors, wood floors, vinyl floors, hoops, wall padding, custom logos, nets, lockers, and anything else to make your indoor court the envy of the neighborhood.</p>
         <span class="overlay"></span>
       </section>
       <section class="what-we-do-item commertial parallax" data-parallax-bg-image="./img/commertial.jpg" data-parallax-bg-position="top center" data-parallax-speed="0.1">
@@ -67,11 +67,26 @@
       <h2 class="contact-us-title">contact us</h2>
       <p class="contact-us-subtitle">For estimates, please contact us at your convenience.  It's an honor to help you make your sports dream a reality.</p>
       <form action="" class="contact-us-form">
-        <input type="text" name="name" placeholder="name" required>
-        <input type="email" name="email" placeholder="email" required>
-        <input type="phone" name="phone" placeholder="phone" class="phone_us" required>
-        <input type="text" name="address" placeholder="address" required>
-        <textarea name="message" cols="10" rows="5" placeholder="message" required></textarea>
+        <div class="input-wrapper">
+          <input type="text" name="name" required>
+          <span class="floating-label">Name</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="email" name="email" required>
+          <span class="floating-label">Email</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="phone" name="phone" class="phone_us" required>
+          <span class="floating-label">Phone</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" name="address" required>
+          <span class="floating-label">Address</span>
+        </div>
+        <div class="input-wrapper">
+          <textarea name="message" cols="10" rows="5" required></textarea>
+          <span class="floating-label">Message</span>
+        </div>
         <input class="contact-us-submit button" type="submit" placeholder="submit">
       </form>
     </section>
@@ -94,7 +109,17 @@
         scrollTop: $(".contact-us").offset().top
     }, 1000);
   });
-    $('.phone_us').mask('(000) 000-0000');
+  var labelAnimation = function() {
+      $("input, textarea").on("focusin", function() {}, function() {
+          $(this).addClass("active");
+      });
+      $("input, textarea").on("focusout", function() {}, function() {
+          if ($(this).val() == "") {
+              $(this).removeClass("active");
+          }
+      });
+  };
+  labelAnimation();
     (function ($) {
       $('.parallax').parallaxBackground();
     })(jQuery);
@@ -113,6 +138,7 @@
       nextArrow: '<span class="slider-arrows slider-arrows_right">&gt;</span>',
       prevArrow: '<span class="slider-arrows">&lt;</span>'
     });
+    $('.phone_us').mask('(000) 000-0000');
   </script>
 </body>
 </html>
