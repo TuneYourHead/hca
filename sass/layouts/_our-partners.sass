@@ -1,0 +1,25 @@
+.our-partners
+  background: $white
+  margin-top: $global-margin
+
+.our-partners-list
+  list-style: none
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  padding: 0 1em
+  margin: 0
+
+.partners-item
+  flex-basis: 6%
+  padding: 0
+  margin: 0.5em 1em
+  &:hover
+    .partners-logo
+      filter: grayscale(0)
+
+.partners-logo
+  max-width: 80%
+  filter: grayscale(1)
+  transition: 0.3s ease all
