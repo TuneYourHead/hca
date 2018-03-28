@@ -52,9 +52,9 @@ ul
 
 .button, .btn
   display: inline-block
-  color: white
+  color: $white
   border: none
-  padding: 1.1em 1em
+  padding: 1.3em 1em
   text-align: center
   height: 50px
   min-width: 150px
@@ -63,6 +63,25 @@ ul
   font-size: 1em
   text-transform: uppercase
   border-radius: $global-radius
-  transition: background-color 0.2s ease-in-out
+  text-shadow: 0 0 0 transparent
+  transition: text-shadow 0.4s ease-in-out
   &:hover
-    background-color: lighten($accent, 10%)
+    text-shadow: 0px 1px 6px rgba(0,0,0,.5)
+
+input, textarea
+  min-height: 35px
+  text-transform: capitalize
+  font-size: 1.2em
+  color: $black
+  width: 400px
+  border: none
+  border-bottom: 2px solid $light-gray
+  margin: 0 auto $global-margin*2
+  display: block
+  transition: border-bottom 0.3s ease-in-out
+  text-indent: none
+  &:focus
+    outline: none
+    border-bottom: 2px solid $accent
+  &::placeholder
+    color: $black
