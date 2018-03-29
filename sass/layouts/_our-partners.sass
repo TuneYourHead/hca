@@ -1,5 +1,4 @@
 .our-partners
-  background: $white
   margin-top: $global-margin
   @media(max-width: $md-max-width)
     margin-top: $global-margin*2
@@ -28,11 +27,8 @@
   @media(max-width: $sm-max-width)
     margin: 0.5em 0
     flex-basis: 15%
-  &:hover
-    .partners-logo
-      filter: grayscale(0)
 
 .partners-logo
   max-width: 80%
-  filter: grayscale(1)
+  filter: grayscale(1) invert(93%)
   transition: 0.3s ease all
