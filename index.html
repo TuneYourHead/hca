@@ -66,7 +66,7 @@
     <section class="contact-us">
       <h2 class="contact-us-title">contact us</h2>
       <p class="contact-us-subtitle">For estimates, please contact us at your convenience.  It's an honor to help you make your sports dream a reality.</p>
-      <form action="" class="contact-us-form">
+      <form  id="gform" data-email="tuneyourhead@gmail.com" action="https://script.google.com/macros/s/AKfycbz6opRDYnlXvTwt-VGE_N09ZlmcRTyM40Ep4FGvvqP5ekta_-Ya/exec" class="contact-us-form">
         <div class="input-wrapper">
           <input type="text" name="name" required>
           <span class="floating-label">Name</span>
@@ -88,6 +88,7 @@
           <span class="floating-label">Message</span>
         </div>
         <input class="contact-us-submit button" type="submit" placeholder="submit">
+        <div style="display: none; color: black;" id="thankyou_message">Thank you!<br>Your message has been sent.</div>
       </form>
     </section>
     <section class="our-partners">
@@ -122,55 +123,11 @@
       <p class="footer-copyright">Copyright © 2018 Homecourtadvantage.net - All Rights Reserved.</p>
     </footer>
   </section>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="./js/parallax-background.min.js"></script>
-  <script src="./js/jquery.mask.min.js"></script>
-  <script>
-  $(".scroll-to-contact").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".contact-us").offset().top
-    }, 1000);
-  });
-  var labelAnimation = function() {
-      $("input, textarea").on("focusin", function() {}, function() {
-          $(this).addClass("active");
-      });
-      $("input, textarea").on("focusout", function() {}, function() {
-          if ($(this).val() == "") {
-              $(this).removeClass("active");
-          }
-      });
-  };
-  labelAnimation();
-    (function ($) {
-      $('.parallax').parallaxBackground();
-    })(jQuery);
-    $('.slider').slick({
-      infinite: false,
-      initialSlide: 2,
-      centerMode: true,
-      centerPadding: 0,
-      slidesToShow: 3,
-      dots: true,
-      speed: 600,
-      cssEase: 'ease-in-out',
-      autoplay: true,
-      appendArrows: ".slider-nav",
-      appendDots: ".slider-nav",
-      nextArrow: '<span class="slider-arrows slider-arrows_right">&gt;</span>',
-      prevArrow: '<span class="slider-arrows">&lt;</span>',
-      responsive: [
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-      ],
-    });
-    $('.phone_us').mask('(000) 000-0000');
-  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" async defer></script>
+  <script src="./js/parallax-background.min.js" async defer></script>
+  <script src="./js/jquery.mask.min.js" async defer></script>
+  <script src="./js/main.js" async defer></script>
+  <script data-cfasync="false" type="text/javascript" src="./js/email-submit.js"></script>
 </body>
 </html>
