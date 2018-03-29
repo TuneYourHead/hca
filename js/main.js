@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  $("form").submit(function() {
+    $(this).submit(function() {
+        return false;
+    });
+    $(this).find("input[type='submit']").attr('disabled', 'disabled').val('submiting'); return true;
+  });
 
     $(".scroll-to-contact").click(function() {
         $('html, body').animate({
@@ -18,7 +24,7 @@ $(document).ready(function() {
     };
 
     labelAnimation();
-    
+
     (function($) {
         $('.parallax').parallaxBackground();
     })(jQuery);
@@ -41,7 +47,8 @@ $(document).ready(function() {
             breakpoint: 800,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                infinite: true
             }
         }, ],
     });
