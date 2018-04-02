@@ -87,6 +87,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         document.getElementById("gform").reset();
         document.getElementById("thankyou_message").style.display = "block";
         $("input[type='submit']").prop('disabled', false).val('submit');
+        $("input").removeClass('active');
         return;
     };
     // url encode form data for sending as post data
