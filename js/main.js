@@ -53,5 +53,5 @@ $(document).ready(function() {
         }, ],
     });
     $('.phone_us').mask('(000) 000-0000');
-    $('.zip-code').mask('000000');
+    $('.zip-code').mask('00000');
 })
