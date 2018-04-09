@@ -4,8 +4,6 @@ function validEmail(email) { // see:
   return re.test(email);
 }
 
-var response = grecaptcha.getResponse();
-
 function validateHuman(honeypot) {
   if (honeypot) {  //if hidden form filled up
     console.log("Robot Detected!");
@@ -74,9 +72,8 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   }
   */
 
-  if( !validEmail(data.email) || response.length == 0) {   // if email is not valid show error
+  if( !validEmail(data.email) ) {   // if email is not valid show error
     document.getElementById("email-invalid").style.display = "block";
-    document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
     return false;
   } else {
     var url = event.target.action;  //
