@@ -3,7 +3,8 @@ $(document).ready(function() {
     $(this).submit(function() {
         return false;
     });
-    $(this).find("input[type='submit']").attr('disabled', 'disabled').val('submiting'); return true;
+    $(this).find("input[type='submit']").attr('disabled', 'disabled').val('submiting');
+    return true;
   });
 
     $(".scroll-to-contact").click(function() {
