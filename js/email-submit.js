@@ -4,6 +4,12 @@ function validEmail(email) { // see:
   return re.test(email);
 }
 
+
+var correctCaptcha = function(response) {
+        alert(response);
+    };
+
+    
 function validateHuman(honeypot) {
   if (honeypot) {  //if hidden form filled up
     console.log("Robot Detected!");
