@@ -14,11 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script>
-  function enableBtn(){
-   document.getElementById("button1").disabled = false;
-  }
-  </script>
 </head>
 <body>
   <section class="wrapper">
@@ -75,7 +70,7 @@
     <section class="contact-us">
       <h2 class="contact-us-title">contact us</h2>
       <p class="contact-us-subtitle">For estimates, please contact us at your convenience.  It's an honor to help you make your sports dream a reality.</p>
-      <form  id="gform" data-email="tuneyourhead@gmail.com" action="https://script.google.com/macros/s/AKfycbz6opRDYnlXvTwt-VGE_N09ZlmcRTyM40Ep4FGvvqP5ekta_-Ya/exec" class="contact-us-form">
+      <form action="#" class="contact-us-form">
         <div class="input-wrapper">
           <input type="text" name="name">
           <span class="floating-label">Name</span>
@@ -96,8 +91,8 @@
           <textarea name="message" cols="10" rows="5"></textarea>
           <span class="floating-label">Message</span>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfRA1IUAAAAAFwW1_HWOULfVVMuqKpAwvbfUJV4" data-callback="enableBtn"></div>
-        <input id="button1" class="contact-us-submit button" type="submit" placeholder="submit">
+        <div class="g-recaptcha" data-sitekey="6LfRA1IUAAAAAFwW1_HWOULfVVMuqKpAwvbfUJV4"></div>
+        <input class="contact-us-submit button" type="submit" placeholder="submit">
         <div style="display: none; color: black;" id="thankyou_message">Thank you!<br>Your message has been sent.</div>
       </form>
     </section>

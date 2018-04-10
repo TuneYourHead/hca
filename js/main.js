@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  document.getElementById("button1").disabled = true;
   $("form").submit(function() {
+    $("#thankyou_message").css("display", "block");
     $(this).submit(function() {
         return false;
     });
