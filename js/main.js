@@ -1,11 +1,22 @@
 $(document).ready(function() {
-  $("form").submit(function() {
-    $("#thankyou_message").css("display", "block");
-    $(this).submit(function() {
-        return false;
-    });
-    $(this).find("input[type='submit']").attr('disabled', 'disabled').val('submiting');
-    return true;
+  $("form").submit(function(e) {
+    $(this).find("input[type='submit']").val('submiting');
+    if (e.preventDefault(), "" == grecaptcha.getResponse()) alert("Recaptcha is wrong!");
+    else {
+        var dataform = $(this).serializeArray();
+        console.log(dataform);
+        $.ajax({
+            type: "POST",
+            url: "https://homecourtadvantage.net/leadform.php",
+            data: dataform,
+            success: function(e) {
+                $("#thankyou_message").css("display", "block");
+                $("form").find("input[type='submit']").val('submit');
+                grecaptcha.reset();
+                $('form')[0].reset();
+            }
+        })
+    }
   });
 
     $(".scroll-to-contact").click(function() {

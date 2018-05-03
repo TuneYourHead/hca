@@ -1,5 +1,6 @@
 <?php
-
+ini_set('display_errors', 1);
+header("Access-Control-Allow-Origin: *");
 $obj = $_POST;
 $name = $_POST['name'];
 $phone = $_POST['phone'];
@@ -17,7 +18,7 @@ $body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Me
 	$body .= "Name: ".$name."<br/>Phone: ".$phone."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message;
 }
 
-require './PHPMailerAutoload.php';
+require "lib/mail/PHPMailerAutoload.php";
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -31,7 +32,8 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('from@example.com', 'Home Court Advantage web site');
-$mail->addAddress('info@elevatecg.com');     // Add a recipient             // Name is optional
+$mail->addAddress('nate@homecourtadvantage.net');
+$mail->addAddress('simon@elevatecg.com');     // Add a recipient             // Name is optional
 $mail->addReplyTo('sergey@elevatecg.com', 'Information');
 
 $mail->isHTML(true);                                  // Set email format to HTML
